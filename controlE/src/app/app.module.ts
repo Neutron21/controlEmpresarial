@@ -7,6 +7,9 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { RaizComponent } from './Components/raiz/raiz.component';
 import { ColaboradoresComponent } from './Components/colaboradores/colaboradores.component';
+import { PreguntasComponent } from './Components/preguntas/preguntas.component';
+import { ContactoComponent } from './Components/contacto/contacto.component';
+import { ServiciosComponent } from './Components/servicios/servicios.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { ColaboradoresComponent } from './Components/colaboradores/colaboradores
     FooterComponent,
     NavbarComponent,
     RaizComponent,
-    ColaboradoresComponent
+    ColaboradoresComponent,
+    PreguntasComponent,
+    ContactoComponent,
+    ServiciosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-colaboradores',
-  templateUrl: './colaboradores.component.html',
-  styleUrls: ['./colaboradores.component.css']
+  selector: 'app-contacto',
+  templateUrl: './contacto.component.html',
+  styleUrls: ['./contacto.component.css']
 })
-export class ColaboradoresComponent implements OnInit {
+export class ContactoComponent implements OnInit {
 
   loading: boolean;
 
@@ -18,5 +18,4 @@ export class ColaboradoresComponent implements OnInit {
       this.loading = false
     }, 800);
   }
-
 }

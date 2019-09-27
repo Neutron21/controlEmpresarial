@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-navbar',
@@ -11,5 +12,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  hideMenu(){
+    $( "#navbarColor01" ).removeClass( "show" )
+  }
 }

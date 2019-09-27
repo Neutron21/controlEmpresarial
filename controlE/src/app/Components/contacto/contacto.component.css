@@ -1,3 +1,8 @@
 .loading{
     width: 40%;
 }
+@media only screen and (max-width: 991px){
+    .mapa{
+        width: 100%;
+    }
+}

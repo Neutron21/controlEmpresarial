@@ -4,4 +4,27 @@
 }
 .loading{
     width: 40%;
+    border-radius: 50px 0px;
+}
+.jumbotron, .card{
+    background-color: #0288d1;
+    color: aliceblue;
+}
+.btn-link{
+    color: aliceblue !important;
+}
+.avatar{
+    border-radius: 0% 40%;
+}
+.nachito{
+    font-family: 'Patrick Hand', cursive;
+}
+.manuel{
+    font-family: 'Courgette', cursive;
+}
+.ivette{
+    font-family: 'Ranga', cursive;
+}
+.colaboradores{
+    font-family: 'Dosis', sans-serif;
 }

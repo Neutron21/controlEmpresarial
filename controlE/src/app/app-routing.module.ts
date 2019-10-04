@@ -9,10 +9,10 @@ import { PreguntasComponent } from './Components/preguntas/preguntas.component';
 
 const routes: Routes = [
   { path: '', component: RaizComponent },
-  { path: '#/contacto', component: ContactoComponent },
-  { path: '#/servicios', component: ServiciosComponent },
-  { path: '#/colaboradores', component: ColaboradoresComponent },
-  { path: '#/preguntas', component: PreguntasComponent },
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'servicios', component: ServiciosComponent },
+  { path: 'colaboradores', component: ColaboradoresComponent },
+  { path: 'preguntas', component: PreguntasComponent },
 ];
 
 @NgModule({

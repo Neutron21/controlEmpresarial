@@ -1,5 +1,11 @@
 .loading{
     width: 40%;
+    border-radius: 50%;
+}
+.contacto-body{
+    background-color: #80cbc4; 
+    /* font-family: 'Concert One', cursive; */
+    font-family: 'Handlee', cursive;
 }
 @media only screen and (max-width: 991px){
     .mapa{

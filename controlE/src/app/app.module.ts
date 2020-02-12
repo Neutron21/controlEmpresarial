@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './Components/footer/footer.component';
@@ -11,6 +11,9 @@ import { PreguntasComponent } from './Components/preguntas/preguntas.component';
 import { ContactoComponent } from './Components/contacto/contacto.component';
 import { ServiciosComponent } from './Components/servicios/servicios.component';
 import { BlogComponent } from './Components/blog/blog.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DataServices } from './Services/dataServices';
+
 
 @NgModule({
   declarations: [
@@ -22,13 +25,15 @@ import { BlogComponent } from './Components/blog/blog.component';
     PreguntasComponent,
     ContactoComponent,
     ServiciosComponent,
-    BlogComponent
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ DataServices ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

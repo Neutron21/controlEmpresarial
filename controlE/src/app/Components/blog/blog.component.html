@@ -1,6 +1,67 @@
 <h1 class="custom-font">Nuestro Blog</h1>
-<frameset cols="70%" rows="100px, 80%" >
-    <frame src="https://controlempresarial.mx/php/addPost.php"></frame>
-    <frame src="https://controlempresarial.mx/php/buscar.php"></frame>
-</frameset>
+<div class="loader d-flex justify-content-center" *ngIf="loading">
+    <img class="img-fluid loading" src="../../../assets/gift.gif">
+</div>
+<div *ngIf="!loading" >
 
+    <form class="form-horizontal form-contactUs" #f="ngForm" (ngSubmit)="validaAcceso()">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form form-group">
+                    <label class="label-text control-label" for="acceso">
+                        Acceso
+                    </label>
+                    <input type="text" class="form-control mb-2" id="acceso" name="acceso" placeholder="Acceso"
+                    [(ngModel)]="acceso" autocomplete="on">
+                    <button type="submit" class="btn btn-info mb-2">Validar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="create-post" *ngIf="key == 'true'">
+        <form class="form-horizontal form-contactUs" #f="ngForm" (ngSubmit)="guardarPost(f)">
+            <div class="form-group row">
+                <label class="label-text col-md-2 control-label" for="titulo">Título</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control mb-2" id="titulo" name="titulo" placeholder="Título"
+                    [(ngModel)]="titulo" autocomplete="off">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="label-text col-md-2 control-label" for="acceso">Contenido</label>
+                <div class="col-sm-9">
+                    <textarea type="text" class="form-control mb-2" id="contenido" name="contenido" placeholder="Contenido"
+                    [(ngModel)]="contenido" autocomplete="off" rows="4" cols="50">
+                    </textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="label-text col-md-2 control-label" for="acceso">Fuente</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control mb-2" id="fuente" name="fuente" placeholder="Fuente"
+                    [(ngModel)]="fuente" autocomplete="off">
+                </div>
+            </div>
+            <div class=" row"> 
+                <label class="label-text col-md-2 control-label" for="acceso"></label>
+                <div class="col-sm-12 col-md-2 mb-2">
+                    <button type="submit" class="btn btn-info">Guardar</button>
+                </div>
+                <div class="col-sm-12 col-md-2 mb-2">
+                    <button class="btn btn-danger">Cancelar</button>    
+                </div>
+            </div>
+             
+        </form>
+    </div>
+    <div class="jumbotron transparent" *ngFor="let articulo of publicaciones">
+        <h2>{{articulo.titulo}}</h2>
+        <p>
+            {{articulo.contenido}}
+        </p>
+
+        Fecha de puclicación: <span>{{articulo.fecha}}</span>
+        <br />
+    Referencias: <a href="{{articulo.fuente}}">{{articulo.fuente}}</a>
+    </div>
+</div>
